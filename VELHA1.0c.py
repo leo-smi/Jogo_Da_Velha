@@ -1,4 +1,6 @@
 from random import choice
+import sys
+import time
 
 print('''
 ##############################################
@@ -20,6 +22,12 @@ CARA:  VOCÊ É O JOGADOR "X"
 COROA: VOCÊ É O JOGADOR "O"
 BOA SORTE!''')
 
+print("JOGANDO A MOEDA!")
+for i in range(5,0,-1):
+    sys.stdout.write(str('.')+' ')
+    sys.stdout.flush()
+    time.sleep(1)
+
 d = ['CARA', 'COROA']
 e = choice(d)
 
@@ -28,7 +36,7 @@ if e == 'CARA':
 else:
         f = 'O'
         
-print(f'O resultado foi "{e}", você é o jogador "{f}"!')
+print(f'\nO resultado foi "{e}", você é o jogador "{f}"!')
 
 j = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
@@ -40,15 +48,16 @@ print('''
       ''')
 
 m = """###############################################            
-#             Campos      Posições            #
-#           0 | 1 | 2    {} | {} | {}            #
-#          ---+---+---  ---+---+---           #      
-#           3 | 4 | 5    {} | {} | {}            #
-#          ---+---+---  ---+---+---           #  
-#           6 | 7 | 8    {} | {} | {}            #
-###############################################     
-    """.format(j[0], j[1], j[2], j[3], j[4], j[5], j[6], j[7], j[8])
-print(m)
+       #             Campos      Posições            #
+       #           0 | 1 | 2    {} | {} | {}            #
+       #          ---+---+---  ---+---+---           #      
+       #           3 | 4 | 5    {} | {} | {}            #
+       #          ---+---+---  ---+---+---           #  
+       #           6 | 7 | 8    {} | {} | {}            #
+       ###############################################""".format(j[0], j[1], j[2], j[3], j[4], j[5], j[6], j[7], j[8])
+ar = [line.strip() for line in m.split('\n')]
+for line in ar:
+        print(line.strip())
 
 # As variaveis a seguir é de critério de comparação mais a frente
 
@@ -121,16 +130,17 @@ while c <= 10:
 
                 j[b] = 'O'
 
-
-        m = """###############################################            
-#             Campos      Posições            #
-#           0 | 1 | 2    {} | {} | {}            #
-#          ---+---+---  ---+---+---           #      
-#           3 | 4 | 5    {} | {} | {}            #
-#          ---+---+---  ---+---+---           #  
-#           6 | 7 | 8    {} | {} | {}            #
-###############################################     
-        """.format(j[0], j[1], j[2], j[3], j[4], j[5], j[6], j[7], j[8])
-        print(m)
+        m = """###############################################         
+               #             Campos      Posições            #
+               #           0 | 1 | 2    {} | {} | {}            #
+               #          ---+---+---  ---+---+---           #    
+               #           3 | 4 | 5    {} | {} | {}            #
+               #          ---+---+---  ---+---+---           # 
+               #           6 | 7 | 8    {} | {} | {}            #
+               ###############################################""".format(j[0], j[1], j[2], j[3], j[4], j[5], j[6], j[7], j[8])
+        
+        arr = [line.strip() for line in m.split('\n')]
+        for line in arr:
+                print(line.strip())
 
         c += 1
