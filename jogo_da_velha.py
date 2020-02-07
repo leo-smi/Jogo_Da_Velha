@@ -56,8 +56,8 @@ b = '12' # diferente e maior que 'a'
 
 def jogada(jog):
 	pos = input(f'Jogador "{jog}", onde pretende fazer a jogada? ')
-	q = 1
-	while q == 1:
+	
+	while 1:
 		if pos.isnumeric()and int(pos) <= 8 and j[int(pos)] == ' ':	
 			pos = int(pos)
 			break
@@ -72,11 +72,6 @@ def jogada(jog):
 
 while c <= 10:
 
-	if ((j.count('X') == 4 and j.count('O') == 5) or\
-		(j.count('X') == 5 and j.count('O') == 4)):
-			print('EMPATE!')
-			break 
-	
 	if c % 2 == 1:
 		jogador = 'X'
 	else:
@@ -105,6 +100,10 @@ while c <= 10:
 		(j[1] == j[4] == j[7] == jogador) or\
 		(j[3] == j[4] == j[5] == jogador)):
 		print(f'Jogador "{jogador}" é o vencedor!')
+		break
+
+	if c == 9:
+		print("EMPATE!")
 		break
 
 	c = c + 1
