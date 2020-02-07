@@ -84,8 +84,6 @@ while c <= 10:
 
 	jogada(jogador)
 
-	print(jogador)
-
 	m = """###############################################         
 			#             Campos      Posições            #
 			#           0 | 1 | 2    {} | {} | {}            #
