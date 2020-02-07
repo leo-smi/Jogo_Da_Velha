@@ -1,22 +1,5 @@
 from random import choice
-import sys
-import time
-import json
-
-print('''
-##############################################
-#    #     #  ###### #      #    #   ##      #
-#    #     #  #      #      #    #  #  #     #
-#     #   #   ####   #      ###### ######    #
-#      # #    #      #      #    # #    #    #
-#       #     ###### ###### #    # #    #    #
-#                                            #
-#                 VERSÃO 1.0c                #
-#          BY: Leandro de Oliveira           #   
-#           Developed in: PyCharm            # 
-#                 PYTHON 3.6                 # 
-##############################################
-''')
+import sys, time, json
 
 print(''' CARA:  VOCÊ É O JOGADOR "X"\nCOROA: VOCÊ É O JOGADOR "O"\nBOA SORTE!''')
 
@@ -56,7 +39,6 @@ b = '12' # diferente e maior que 'a'
 
 def jogada(jog):
 	pos = input(f'Jogador "{jog}", onde pretende fazer a jogada? ')
-	
 	while 1:
 		if pos.isnumeric()and int(pos) <= 8 and j[int(pos)] == ' ':	
 			pos = int(pos)
@@ -71,7 +53,6 @@ def jogada(jog):
 
 
 while c <= 10:
-
 	if c % 2 == 1:
 		jogador = 'X'
 	else:
