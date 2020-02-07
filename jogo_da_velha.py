@@ -8,7 +8,7 @@ print('''##############################################\n#    #     #  ###### # 
 #                                            #\n#                 VERSÃO 1.0c                #
 #          BY: Leandro de Oliveira           #\n#           Developed in: PyCharm            # 
 #                 PYTHON 3.6                 #\n##############################################''')
-print(''' CARA:  VOCÊ É O JOGADOR "X"\nCOROA: VOCÊ É O JOGADOR "O"\nBOA SORTE!''')
+print('''CARA: VOCÊ É O JOGADOR "X"\nCOROA: VOCÊ É O JOGADOR "O"\nBOA SORTE!''')
 print("JOGANDO A MOEDA!")
 for i in range(5,0,-1):
     sys.stdout.write(str('.')+' ')
@@ -20,10 +20,8 @@ print(f'\nO resultado foi "{e[0]}", você é o jogador "{e[1]}"!')
 
 j = [' ']*9
 
-print('''
-###############################################\n# A tabela do jogo é representada por campos, #
-# escolha o campo que pretende preencher.     #\n###############################################
-      ''')
+print('''###############################################\n# A tabela do jogo é representada por campos, #
+# escolha o campo que pretende preencher.     #\n###############################################''')
 def tabela():
 	m = """###############################################            
 		#             Campos      Posições            #
