@@ -57,7 +57,7 @@ def jogada(jogador):
     T[pos] = jogador
 
 
-def situacao(t, jogador): # v de vetor
+def situacao(t, jogador): # t minúsculo por ser um elemento do vetor T
     if ((t[0] == t[1] == t[2] == jogador) or\
 		(t[2] == t[5] == t[8] == jogador) or\
 		(t[6] == t[7] == t[8] == jogador) or\
