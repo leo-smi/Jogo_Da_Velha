@@ -5,8 +5,8 @@ print(
     '''CARA: VOCÊ É O JOGADOR "X"\nCOROA: VOCÊ É O JOGADOR "O"\nBOA SORTE!\n'''
 )
 print("JOGANDO A MOEDA!")
-for i in range(5, 0, -1):
-    sys.stdout.write(str('.') + ' ')
+for i in range(2, 0, -1):
+    sys.stdout.write(str('.') + '  ')
     sys.stdout.flush()
     time.sleep(1)
 d = [('CARA', 'X'), ('COROA', 'O')]
@@ -16,20 +16,20 @@ print(f'\n\nO resultado foi "{e[0]}", você é o jogador "{e[1]}"!\n')
 T = [' '] * 9 # T de tabuleiro
 
 print(
-    '''###############################################\n# A tabela do jogo é representada por campos, #
-# escolha o campo que pretende preencher.     #\n###############################################'''
+    '''+---------------------------------------------+\n| A tabela do jogo é representada por campos, |
+| escolha o campo que pretende preencher.     |\n+---------------------------------------------+'''
 )
 
 
 def tabela():
-    m = """\n###############################################            
-		#             Campos      Posições            #
-		#           0 | 1 | 2    {} | {} | {}            #
-		#          ---+---+---  ---+---+---           #      
-		#           3 | 4 | 5    {} | {} | {}            #
-		#          ---+---+---  ---+---+---           #  
-		#           6 | 7 | 8    {} | {} | {}            #
-		###############################################"""\
+    m = """\n +---------------------------------------------+           
+		|             Campos      Posições            |
+		|           0 | 1 | 2    {} | {} | {}            |
+		|          ---+---+---  ---+---+---           |      
+		|           3 | 4 | 5    {} | {} | {}            |
+		|          ---+---+---  ---+---+---           |  
+		|           6 | 7 | 8    {} | {} | {}            |
+		+---------------------------------------------+"""\
      .format(T[0], T[1], T[2], T[3], T[4], T[5], T[6], T[7], T[8])
     ar = [line.strip() for line in m.split('\n')]
     for line in ar:
