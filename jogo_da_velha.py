@@ -37,8 +37,7 @@ def tabela():
 tabela()			
 
 def jogada(jog):
-	pos = input(f'Jogador "{jog}", onde pretende fazer a jogada? ')
-	
+	pos = input(f'Jogador "{jog}", onde pretende fazer a jogada? ')	
 	while 1:
 		if pos.isnumeric()and int(pos) <= 8 and j[int(pos)] == ' ':	
 			pos = int(pos)
