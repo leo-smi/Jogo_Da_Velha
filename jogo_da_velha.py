@@ -1,9 +1,7 @@
 from random import choice
 import sys, time, json
 
-print(
-    '''CARA: VOCÊ É O JOGADOR "X"\nCOROA: VOCÊ É O JOGADOR "O"\nBOA SORTE!\n'''
-)
+print('''CARA: VOCÊ É O JOGADOR "X"\nCOROA: VOCÊ É O JOGADOR "O"\nBOA SORTE!\n''')
 print("JOGANDO A MOEDA!")
 for i in range(2, 0, -1):
     sys.stdout.write(str('.') + '  ')
@@ -17,9 +15,7 @@ T = [' '] * 9 # T de tabuleiro
 
 print(
     '''+---------------------------------------------+\n| A tabela do jogo é representada por campos, |
-| escolha o campo que pretende preencher.     |\n+---------------------------------------------+'''
-)
-
+| escolha o campo que pretende preencher.     |\n+---------------------------------------------+''')
 
 def tabela():
     m = """\n +---------------------------------------------+           
@@ -35,9 +31,7 @@ def tabela():
     for line in ar:
         print(line.strip())
 
-
 tabela()
-
 
 def jogada(jogador):
     pos = input(f'Jogador "{jogador}", onde pretende fazer a jogada? ')
@@ -47,17 +41,12 @@ def jogada(jogador):
             break
         else:
             if pos.isnumeric() and int(pos) <= 8 and T[int(pos)] != ' ':
-                pos = input(
-                    f'Jogador "{jogador}" esse campo já foi preenchido, por favor escolha outro: '
-                )
+                pos = input(f'Jogador "{jogador}" esse campo já foi preenchido, por favor escolha outro: ')
             else:
-                pos = input(
-                    f'Jogador "{jogador}", digite um caractere numérico entre 0 e 8: '
-                )
+                pos = input( f'Jogador "{jogador}", digite um caractere numérico entre 0 e 8: ')
     T[pos] = jogador
 
-
-def situacao(t, jogador): # t minúsculo por ser um elemento do vetor T
+def situacao(t, jogador): # t de vetor
     if ((t[0] == t[1] == t[2] == jogador) or\
 		(t[2] == t[5] == t[8] == jogador) or\
 		(t[6] == t[7] == t[8] == jogador) or\
@@ -68,8 +57,7 @@ def situacao(t, jogador): # t minúsculo por ser um elemento do vetor T
 		(t[3] == t[4] == t[5] == jogador)):
         print(f'Jogador "{jogador}" é o vencedor!')
         return 'temos um vencedor'
-
-
+		
 c = 1
 
 while c <= 10:
