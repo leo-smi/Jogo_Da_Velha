@@ -1,6 +1,6 @@
-# Jogo da velha 1.0
+# Jogo Da Velha 
 
-# BY: Leandro de Oliveira 
+# By: Leandro de Oliveira 
 
 
 Este jogo é feito para ser jogado por duas pessoas!
